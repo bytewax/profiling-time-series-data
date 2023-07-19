@@ -59,7 +59,7 @@ To simulate the context we would find with streaming data, we will read the data
 
 First, let’s make some necessary imports:
 
-https://github.com/bytewax/-Profiling-Time-Series-Data/blob/main/dataflow.py#L1-L12
+[https://github.com/bytewax/-Profiling-Time-Series-Data/blob/main/dataflow.py#L1-L12](https://github.com/bytewax/-Profiling-Time-Series-Data/blob/119059e709a639e9fd3ac10f1c83e3cc4d91954c/dataflow.py#L1-L12)
 
 Then, we define our dataflow object and add our CSV input.
 
