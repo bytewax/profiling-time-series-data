@@ -21,13 +21,13 @@ Introduction: *In this guide, we will show you how you can combine bytewax with 
 
 ## Table of content
 
-- Resources
-- Data Profiling
-- Step 1. Environmental Sensor Telemetry Dataset 
-- Step 2. Inputs and parsing
-- Step 3. Windowing
-- Step 4. Profile report
-- Summary
+- [Resources](https://github.com/bytewax/-Profiling-Time-Series-Data/tree/main#resources)
+- [Data Profiling](https://github.com/bytewax/-Profiling-Time-Series-Data/tree/main#data-profiling)
+- [Step 1. Environmental Sensor Telemetry Dataset](https://github.com/bytewax/-Profiling-Time-Series-Data/tree/main#step-1-environmental-sensor-telemetry-dataset)
+- [Step 2. Inputs and parsing](https://github.com/bytewax/-Profiling-Time-Series-Data/tree/main#step-2-inputs-and-parsing)
+- [Step 3. Windowing](https://github.com/bytewax/-Profiling-Time-Series-Data/tree/main#step-3-windowing)
+- [Step 4. Profile report](https://github.com/bytewax/-Profiling-Time-Series-Data/tree/main#step-4-profile-report)
+- [Summary](https://github.com/bytewax/-Profiling-Time-Series-Data/tree/main#summary)
 
 ## Resources
 
