@@ -24,7 +24,9 @@ Introduction: *In this guide, we will show you how you can combine bytewax with 
 - Resources
 - Data Profiling
 - Step 1. Environmental Sensor Telemetry Dataset 
-- Step 3
+- Step 2. Inputs and parsing
+- Step 3. Windowing
+- Step 4. Profile report
 - Summary
 
 ## Resources
@@ -72,7 +74,7 @@ https://github.com/bytewax/-Profiling-Time-Series-Data/blob/9b5985e778157b55b2be
 The `map` method will make the change to each data point in a stateless way. The reason we have modified the shape of our data is so that we can easily group the data in the next steps to profile data for each device separately rather than for all of the devices simultaneously.
 
 
-## Step 3. 
+## Step 3. Windowing
 Now we will take advantage of the stateful capabilities of bytewax to gather data for each device over a duration of time that we have defined. ydata-profiling expects a snapshot of the data over time, which makes the `window` operator the perfect method to use to do this.
 
 https://github.com/bytewax/-Profiling-Time-Series-Data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L28-L52
@@ -80,7 +82,7 @@ https://github.com/bytewax/-Profiling-Time-Series-Data/blob/9b5985e778157b55b2be
 In ydata-profiling, we are able to produce summarizing statistics for a dataframe which is specified for a particular context. For instance, in our example, we can produce snapshots of data referring to each IoT device or to particular time frames.
 
 
-## Step 4. 
+## Step 4. Profile report
 
 After the snapshots are defined, leveraging ydata-profiling is as simple as calling the PorfileReport for each of the dataframes we would like to analyze:
 
