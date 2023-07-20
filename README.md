@@ -86,7 +86,7 @@ After the snapshots are defined, leveraging ydata-profiling is as simple as call
 
 https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L56-L73
 
-## Step 5. Kicking off
+## Step 5. Kicking Things off
 Once the profile is complete, the dataflow expects some output, so we can use the built-in `StdOutput` to print the device that was profiled and the time it was profiled at that was returned by the profile function in the map step:
 
 https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L75
