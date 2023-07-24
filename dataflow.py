@@ -1,15 +1,8 @@
-import json
 from datetime import datetime, timedelta, timezone
-import os
-import csv
-import re
-
-import requests
 
 from bytewax.dataflow import Dataflow
 from bytewax.connectors.stdio import StdOutput
 from bytewax.connectors.files import CSVInput
-from bytewax.testing import run_main
 
 flow = Dataflow()
 flow.input("simulated_stream", CSVInput("iot_telemetry_data_1000"))
@@ -26,9 +19,6 @@ flow.map(parse_time)
 flow.map(lambda reading_data: (reading_data['device'], reading_data))
 
 from bytewax.window import EventClockConfig, TumblingWindow
-from datetime import datetime
-
-import pandas as pd
 
 # This is the accumulator function, and outputs a list of readings
 def acc_values(acc, reading):
@@ -54,6 +44,7 @@ flow.fold_window("running_average", cc, wc, list, acc_values)
 flow.inspect(print)
 
 from ydata_profiling import ProfileReport
+import pandas as pd
 
 def profile(device_id__readings):
     print(device_id__readings)
