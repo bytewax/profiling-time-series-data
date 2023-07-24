@@ -93,7 +93,7 @@ https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef
 
 And are ready to run our program! You can clone this repository to your machine and run the following commands:
 
-https://github.com/bytewax/-Profiling-Time-Series-Data/blob/main/run.sh#L3
+https://github.com/bytewax/profiling-time-series-data/blob/1eb17525b41d11b46478fef5ec95693e22bac62e/run.sh#L3
 
 ## Summary
 
