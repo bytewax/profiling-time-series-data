@@ -39,7 +39,7 @@ Introduction: *In this guide, we will show you how you can combine [bytewax](htt
 
 ## Data Profiling
 
-instead of the usual approach, where data quality is assessed during the creation of the data warehouse or dashboard solution, it is a cheaper, more effective and ultimately more robust approach to monitor the quality closer to the source, which is a great fit for stream processing, since most data is created in real-time. This will prevent any data quality issues from multiplying in downstream tables and ending up in customer-facing services.
+Instead of the usual approach, where data quality is assessed during the creation of the data warehouse or dashboard solution, it is a cheaper, more effective and ultimately more robust approach to monitor the quality closer to the source, which is a great fit for stream processing, since most data is created in real-time. This will prevent any data quality issues from multiplying in downstream tables and ending up in customer-facing services.
 
 In what concerns data profiling, [ydata-profiling](https://github.com/ydataai/ydata-profiling) has consistently been a [crowd favorite](https://medium.com/ydata-ai/auditing-data-quality-with-pandas-profiling-b1bf1919f856), either for [tabular](https://ydata-profiling.ydata.ai/docs/master/pages/getting_started/examples.html) or [time-series](https://medium.com/towards-data-science/how-to-do-an-eda-for-time-series-cbb92b3b1913) data. And no wonder why — it’s one line of code for an extensive set of analysis and insights.
 
@@ -91,7 +91,7 @@ Once the profile is complete, the dataflow expects some output, so we can use th
 
 https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L75
 
-And are ready to run our program! You can clone this repository to your machine and run the following commands:
+And we are ready to run our program! You can clone this repository to your machine and run the following commands:
 
 https://github.com/bytewax/profiling-time-series-data/blob/1eb17525b41d11b46478fef5ec95693e22bac62e/run.sh#L3
 
@@ -101,7 +101,7 @@ We can now use the profiling reports to validate the data quality, check for cha
 
 Being able to process and profile incoming data appropriately opens up a plethora of use cases across different domains, from the correction of errors in data schemas and formats to the highlighting and mitigation of additional issues that derive from real-world activities, such as *anomaly detection* (e.g., fraud or intrusion/threats detection), *equipment malfunction*, and other events that deviate from the expectations (e.g., *data drifts* or misalignment with business rules).
 
-_This article was written with the support of the [Ydata team](https://ydata.ai/)_
+_This guide was written with the support of the [Ydata team](https://ydata.ai/)_
 
 ## We want to hear from you!
 
