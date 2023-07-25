@@ -59,7 +59,7 @@ To simulate a stream of data, we will use the Bytewax CSVInput connector to read
 
 First, let’s make some necessary imports:
 
-https://github.com/bytewax/profiling-time-series-data/blob/119059e709a639e9fd3ac10f1c83e3cc4d91954c/dataflow.py#L1-L12
+https://github.com/bytewax/profiling-time-series-data/blob/9f12b285247de91befc5f3d46a083a7bcf2b9b23/dataflow.py#L1C1-L6C1
 
 Then, we define our dataflow object and add our CSV input.
 
