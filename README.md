@@ -59,15 +59,15 @@ To simulate a stream of data, we will use the Bytewax CSVInput connector to read
 
 First, let’s make some necessary imports:
 
-https://github.com/bytewax/profiling-time-series-data/blob/9f12b285247de91befc5f3d46a083a7bcf2b9b23/dataflow.py#L1C1-L6C1
+https://github.com/bytewax/profiling-time-series-data/blob/475cc886604547fb3a8d8dd15783b63e1597e226/dataflow.py#L1-L5
 
 Then, we define our dataflow object and add our CSV input.
 
-https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L14-L15
+https://github.com/bytewax/profiling-time-series-data/blob/475cc886604547fb3a8d8dd15783b63e1597e226/dataflow.py#L7-L8
 
 Afterward, we will use a stateless `map` method where we pass in a function to convert the string to a `datetime` object and restructure the data to the format (device_id, data).
 
-https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L17-L26
+https://github.com/bytewax/profiling-time-series-data/blob/475cc886604547fb3a8d8dd15783b63e1597e226/dataflow.py#L10-L19
 
 The `map` method will make the change to each data point in a stateless way. The reason we have modified the shape of our data is so that we can easily group the data in the next steps to profile data for each device separately rather than for all of the devices simultaneously.
 
@@ -75,7 +75,7 @@ The `map` method will make the change to each data point in a stateless way. The
 ## Step 3. Windowing
 Now we will take advantage of the stateful capabilities of bytewax to gather data for each device over a duration of time that we have defined. ydata-profiling expects a snapshot of the data over time, therefore the `window` operator is the perfect method to use to do this.
 
-https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L28-L52
+https://github.com/bytewax/profiling-time-series-data/blob/475cc886604547fb3a8d8dd15783b63e1597e226/dataflow.py#L21-L42
 
 In ydata-profiling, we are able to produce summary statistics for a Pandas DataFrame which is specified for a particular context. For instance, in our example, we can produce snapshots of data referring to each IoT device or to particular time frames.
 
@@ -84,12 +84,12 @@ In ydata-profiling, we are able to produce summary statistics for a Pandas DataF
 
 After the snapshots are defined, leveraging ydata-profiling is as simple as calling the `PorfileReport` method for each of the dataframes we would like to analyze:
 
-https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L56-L73
+https://github.com/bytewax/profiling-time-series-data/blob/475cc886604547fb3a8d8dd15783b63e1597e226/dataflow.py#L46-L64
 
 ## Step 5. Kicking Things off
 Once the profile is complete, the dataflow expects some output, so we can use the built-in `StdOutput` to print the device that was profiled and the time it was profiled at that was returned by the profile function in the map step:
 
-https://github.com/bytewax/profiling-time-series-data/blob/9b5985e778157b55b2bef412a5cda0cd790d0dc2/dataflow.py#L75
+https://github.com/bytewax/profiling-time-series-data/blob/475cc886604547fb3a8d8dd15783b63e1597e226/dataflow.py#L66
 
 And we are ready to run our program! You can clone this repository to your machine and run the following commands:
 
