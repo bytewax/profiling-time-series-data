@@ -13,7 +13,10 @@ Introduction: *In this guide, we will show you how you can combine [bytewax](htt
 
 ## ****Prerequisites****
 
-**Python modules** bytewax==0.16.2 ydata-profiling==4.3.1
+**Python modules** 
+bytewax==0.16.2 
+ydata-profiling==4.3.1
+matplotlib==3.7
 
 ## Your Takeaway
 
